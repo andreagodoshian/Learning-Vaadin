@@ -18,7 +18,7 @@ public class LandingView extends VerticalLayout {
     H1 header = new H1("Welcome!");
     Paragraph p = new Paragraph("This is my first Vaadin project. Well... basically first lol");
     TextField name = new TextField("Name");
-    Button button = new Button("Click me!");
+    Button button = new Button("Enter!");
     public LandingView() {
         add(header, p);
 

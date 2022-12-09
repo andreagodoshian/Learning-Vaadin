@@ -17,29 +17,16 @@ import com.vaadin.flow.router.Route;
 public class AndreasView extends VerticalLayout {
 
     Button buttonClickMe = new Button("Click me!");
-    Button buttonSubmit = new Button("Submit!");
-    Button buttonSleep = new Button("Sleep!");
-
-    TextField textClickMe = new TextField("Click me!");
-    TextField textSubmit = new TextField("Submit!");
-    TextField textSleep = new TextField("Sleep!");
+    TextField name = new TextField("Name");
 
     public AndreasView() {
 
-        buttonClickMe.addClickListener(c -> Notification.show("Time to click, " + textClickMe.getValue()));
+        buttonClickMe.addClickListener(c -> Notification.show("Thanks for clicking, " + name.getValue()));
 
-        buttonSubmit.addClickListener(c -> Notification.show("Time to submit, " + textSubmit.getValue()));
-
-        buttonSleep.addClickListener(c -> Notification.show("Time to sleep, " + textSleep.getValue()));
-
-        HorizontalLayout hlClick = new HorizontalLayout(textClickMe, buttonClickMe);
-        HorizontalLayout hlSubmit = new HorizontalLayout(textSubmit, buttonSubmit);
-        HorizontalLayout hlSleep = new HorizontalLayout(textSleep, buttonSleep);
+        HorizontalLayout hlClick = new HorizontalLayout(name, buttonClickMe);
         hlClick.setDefaultVerticalComponentAlignment(Alignment.BASELINE);
-        hlSubmit.setDefaultVerticalComponentAlignment(Alignment.AUTO);
-        hlSleep.setDefaultVerticalComponentAlignment(Alignment.START);
 
-        add(new H1("What am I supposed to do?"), hlClick, hlSubmit, hlSleep);
+        add(new H1("What am I supposed to do?"), hlClick);
 
         DatePicker datePicker = new DatePicker("Start date");
         add(datePicker);
