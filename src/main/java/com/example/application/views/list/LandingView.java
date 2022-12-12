@@ -12,7 +12,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("list")
-@Route(value = "")
+@Route(value = "", layout = MainLayout.class)
 public class LandingView extends VerticalLayout {
 
     H1 header = new H1("Welcome!");

@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route;
 
 import java.util.Collections;
 
-@Route(value = "/listview")
+@Route(value = "/listview", layout = MainLayout.class)
 @PageTitle("Contacts | Vaadin CRM")
 public class ListView extends VerticalLayout {
     Grid<Contact> grid = new Grid<>(Contact.class);

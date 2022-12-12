@@ -13,7 +13,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Andrea's View")
-@Route("/andreasview")
+@Route(value = "/andreasview", layout = MainLayout.class)
 public class AndreasView extends VerticalLayout {
 
     Button buttonClickMe = new Button("Click me!");
