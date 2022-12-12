@@ -30,12 +30,13 @@ public class MainLayout extends AppLayout {
     private void createDrawer() {
         RouterLink landingView = new RouterLink("Landing", LandingView.class);
         RouterLink listView = new RouterLink("List", ListView.class);
+        RouterLink dashboardView = new RouterLink("Dashboard", DashboardView.class);
         RouterLink andreasView = new RouterLink("Andrea's View", AndreasView.class);
 
         listView.setHighlightCondition(HighlightConditions.sameLocation());
 
         addToDrawer(new VerticalLayout(
-                landingView, listView, andreasView
+                landingView, listView, dashboardView, andreasView
         ));
     }
 }
