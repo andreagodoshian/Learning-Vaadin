@@ -12,8 +12,11 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
+import javax.annotation.security.PermitAll;
+
 @PageTitle("Andrea's View")
 @Route(value = "/andreasview", layout = MainLayout.class)
+@PermitAll // all that are logged in
 public class AndreasView extends VerticalLayout {
 
     Button buttonClickMe = new Button("Click me!");

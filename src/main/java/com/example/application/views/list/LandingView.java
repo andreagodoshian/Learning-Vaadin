@@ -11,8 +11,11 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
+import javax.annotation.security.PermitAll;
+
 @PageTitle("list")
 @Route(value = "", layout = MainLayout.class)
+@PermitAll // all that are logged in
 public class LandingView extends VerticalLayout {
 
     H1 header = new H1("Welcome!");
